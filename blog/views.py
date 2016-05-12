@@ -15,3 +15,8 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
+	
+	# to jest widok post detail. przyjmuje on request (linka z url) oraz dodatkowa zmienna przekazana w linku
+	# wywoluje on metody z modelu. get_object_or_404 jest zdefiniowana w Django. 
+	# kolejny krok to renderowanie strony przy uzyciu templatki html przekazujac jej parametry w zmiennej post.
+	# pk=pk mozna zastapic tocoDostalemzLinku = id (baza danych)
